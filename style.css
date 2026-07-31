@@ -1,0 +1,393 @@
+* {
+	background-color: #1A0E05;
+	color: white;
+}
+
+header {
+	text-align: center;
+	flex: 100%;
+}
+
+header h1 {
+	font-size: 2.5em;
+}
+
+header p {
+	padding: 10px;
+	font-size: 1.3em;
+	line-height: 25px;
+}
+
+/* Navigation bar with images of their respective mythology */
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Jumps to quiz or game when clicked */
+#quizBtn, #gameBtn {
+	text-decoration: none;
+	flex: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+/* Color based on their mythology */
+.greekHeader {
+	color: #C8A55F;
+	text-align: center;
+}
+
+.norseHeader {
+	color: #4CA5C7;
+	text-align: center;
+}
+
+.chineseHeader {
+	color: #CD071E;
+	text-align: center;
+}
+
+nav article {
+	flex: 1;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+/* Navigation Images, when hovered the cursor will be pointed to let the user know their selecting the button */
+img {
+	width: 35em;
+	height: auto;
+	transition: 0.3s;
+	border-radius: 10px;
+}
+
+img:hover {
+	transform: scale(1.07);
+	transition: 0.3s;
+}
+
+#backBtn {
+	font-size: 30px;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+}
+
+/* For consistent design throughout the 3 mythology pages */
+.page {
+	padding: 10px 50px 10px 50px;
+}
+
+.page h2 {
+	font-size: 2em;
+}
+
+.page h3 {
+	font-size: 1.5em;
+}
+
+.page h4 {
+	text-decoration: underline;
+}
+
+#pageGreek h3 {
+	padding-top: 20px;
+	color: #C8A55F;
+}
+
+#pageNorse h3 {
+	padding-top: 20px;
+	color: #4CA5C7;
+}
+
+#pageChinese h3 {
+	padding-top: 20px;
+	color: #CD071E;
+}
+
+.page p {
+	padding-bottom: 20px;
+	font-size: 1.2em;
+}
+
+#pageGreek, #pageNorse, #pageChinese {
+	flex: 100%;
+}
+
+#pageQuiz {
+	margin-top: 50px;
+	flex: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#pageQuiz form {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.1em;
+	background-color: #2B1708;
+	border-radius: 20px;
+}
+
+/* Create a separate color border for the quiz specifically */
+#pageQuiz form h3,
+#pageQuiz form label,
+#pageQuiz form article {
+	background-color: #2B1708;
+}
+
+#pageQuiz form label {
+	color: #C2BEBE;
+	padding-bottom: 0;
+	font-size: 0.9em;
+}
+
+#pageQuiz article {
+	flex: 1;
+	margin: 0px 50px 0px 50px;
+}
+
+#pageQuiz #submitArticle {
+	flex: 100%;
+	background-color: #2B1708;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+/* Hidden for the score display */
+#submitArticle h2{
+	display: none;
+}
+
+#afrSubmitText{
+	flex: 100%;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+#tryAgainBtn {
+    display: block;
+    margin: 20px auto;
+}
+
+#pageQuiz button, #tryAgainBtn {
+	padding: 10px 20px 10px 20px;
+	background-color: #734310;
+	border-radius: 10px;
+}
+
+#gameContainer {
+	flex: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+#gameContainer h2 {
+	flex: 100%;
+	text-align: center;
+}
+
+#gameText{
+	flex: 100%;
+}
+
+#gameArea{
+	width: 600px;
+	height: 500px;
+	border: 4px solid black;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	background: #d8f1ff;
+
+}
+
+#player{
+	background: url('./images/sprites.png') no-repeat -10px -20px;
+	width: 88px;
+	height: 83px;
+	position: absolute;
+	left: 260px;
+	bottom: 0px;
+}
+
+#winText{
+	position: absolute;
+	left: 210px;
+	bottom: 260px;
+}
+
+.object{
+	position: absolute;
+	top: 0;
+}
+
+#item{
+	background: url('./images/sprites.png') no-repeat -109px -23px;
+	width: 36px;
+	height: 77px;
+	left: 280px;
+}
+
+#otherItem1, #otherItem2, #otherItem3, #otherItem4{
+	background-color: red;
+}
+
+#otherItem1{
+	background: url('./images/sprites.png') no-repeat -18px -113px;
+	width: 20px;
+	height: 59px;
+	left: 30px;
+}
+
+#otherItem2{
+	background: url('./images/sprites.png') no-repeat -48px -114px;
+	width: 28px;
+	height: 56px;
+	left: 160px;
+}
+
+#otherItem3{
+	background: url('./images/sprites.png') no-repeat -89px -118px;
+	width: 39px;
+	height: 46px;
+	left: 400px;
+}
+
+#otherItem4{
+	background: url('./images/sprites.png') no-repeat -140px -113px;
+	width: 27px;
+	height: 58px;
+	left: 530px;
+}
+
+#gameInfo{
+	width: 600px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#time{
+	flex: 100%;
+}
+
+#gameCtrlBtn{
+	flex: 100%;
+}
+
+.miniGameBtn{
+	padding: 10px 20px 10px 20px;
+	background-color: #734310;
+	border-radius: 10px;
+}
+
+#startGame, #restartGame{
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+#mobileBtn{
+	display: none;
+}
+
+#moveLeft, #moveRight{
+	padding: 50px;
+	margin: 0px 50px 0px 50px;
+}
+
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+footer h2{
+	flex: 100%;
+}
+
+footer img{
+	width: 400px;
+	height: 400px;
+}
+
+/* Mobile design */
+@media (max-width: 800px) {
+
+	header h1 {
+		font-size: 2em;
+	}
+	header p {
+		font-size: 1em;
+		line-height: 15px;
+	}
+	img {
+		width: 15em;
+		height: auto;
+	}
+
+	#pageQuiz form {
+		font-size: 0.8em;
+	}
+
+	#pageQuiz article {
+		flex: 1;
+		margin: 0px 25px 0px 25px;
+	}
+	
+	#mobileBtn {
+	display: block;
+	}
+	
+	footer h2, footer img{
+	display: none;
+	}
+}
+
+/* Animation for the player when collecting the item */
+
+/* If thunderbolt is collected */
+@keyframes collectPulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.collectPulse {
+	animation: collectPulse 0.25s ease-in-out;
+}
+
+/* If other items is collected */
+@keyframes shake {
+	0%, 100% { transform: translateX(0); }
+	20%, 60% { transform: translateX(-8px); }
+	40%, 80% { transform: translateX(8px); }
+}
+
+.shake {
+	animation: shake 0.3s ease-in-out;
+}
